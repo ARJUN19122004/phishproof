@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhishProof - Phishing Detection Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="result-display">
+        <h2>Phishing Detection Result</h2><br><br>
+        <p><strong>Entered URL:</strong><br><br><br> <span id="typed-url">{{ url }}</span></p><br>
+        <p><strong>Detection Result:</strong> <br><br><br><span id="result-message" class="{{ 'legitimate' if result == 'Legitimate Website' else '' }}">{{ result }}</span></p><br>
+        <a href="/" id="back-button">Back</a>
+    </div>
+</body>
+</html>

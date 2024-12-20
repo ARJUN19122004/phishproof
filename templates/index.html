@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhishProof - Phishing Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+    <h1>PhishProof</h1>
+    <p>Enhance Your Web Security with Real-Time Phishing Detection</p>
+</header>
+<main>
+    <section class="intro">
+        <h2>Stay Safe Online</h2>
+        <p>In today's digital world, phishing attacks are becoming increasingly sophisticated. These attacks can trick users into revealing personal information like passwords, credit card details, and other sensitive data.</p>
+        <p><strong>PhishProof</strong> helps you detect phishing websites before they can cause harm by analyzing the URL you enter. Using our machine learning-based model, we can classify URLs as either legitimate or phishing, giving you peace of mind while browsing the web.</p>
+        
+        <h3>How It Works:</h3>
+        <ul>
+            <li><strong>Step 1:</strong> Enter any URL into the input box below.</li>
+            <li><strong>Step 2:</strong> Click on the "Check URL" button to submit the URL for analysis.</li>
+            <li><strong>Step 3:</strong> You'll receive an instant result indicating whether the website is safe or a phishing site in the bottom of the page.</li>
+        </ul>
+
+        <!-- URL Input Form -->
+        <form id="url-check-form">
+            <input type="url" id="url-input" name="url" placeholder="Enter URL here" value="http://www." required>
+            <button type="submit">Check URL</button>
+        </form>
+    </section>
+
+    <!-- Result Box (Initially Hidden) -->
+    <section id="result-box" class="result-box" style="display: none;">
+        <h3>Checked URL:</h3>
+        <p><strong id="checked-url">example.com</strong></p>
+        <h4>Result:</h4>
+        <p id="result-text">Legitimate Website</p>
+        <button id="back-btn">Refresh</button>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 PhishProof. All rights reserved.</p>
+</footer>
+
+<script src="{{ url_for('static', filename='index.js') }}"></script>
+</body>
+</html>
